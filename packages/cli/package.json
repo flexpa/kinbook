@@ -1,5 +1,5 @@
 {
-  "name": "@ftp/cli",
+  "name": "@kinbook/cli",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -9,8 +9,8 @@
     "ftree": "src/index.ts"
   },
   "dependencies": {
-    "@ftp/core": "*",
-    "@ftp/sync": "*"
+    "@kinbook/core": "*",
+    "@kinbook/sync": "*"
   },
   "scripts": {
     "build": "bun build ./src/index.ts --compile --outfile ../../bin/ftree"

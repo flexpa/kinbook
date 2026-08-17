@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import type { Family, GenDate, Person, Sex } from "@ftp/core";
+import type { Family, GenDate, Person, Sex } from "@kinbook/core";
 import type { FhirBundle, FhirFamilyMemberHistory, FhirPatient } from "../src/index";
 import { relatives, toFhir5, toFhirDate } from "../src/index";
 

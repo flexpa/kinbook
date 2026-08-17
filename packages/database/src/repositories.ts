@@ -8,7 +8,7 @@ import type {
   Person,
   Place,
   Sex,
-} from "@ftp/core";
+} from "@kinbook/core";
 import type { TreeDatabase } from "./connection";
 import type { Bindings } from "./connection";
 

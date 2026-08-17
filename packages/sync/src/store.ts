@@ -7,17 +7,17 @@ import type {
   SearchResult,
   TreeStore,
   UpdatePersonInput,
-} from "@ftp/core";
-import { genId } from "@ftp/database";
-import type { Repositories } from "@ftp/database";
-import { toFhir5 } from "@ftp/fhir";
-import type { GedcomDocument } from "@ftp/gedcom";
-import { toGedcom55 } from "@ftp/gedcom";
-import { toGedcom70 } from "@ftp/gedcom";
+} from "@kinbook/core";
+import { genId } from "@kinbook/database";
+import type { Repositories } from "@kinbook/database";
+import { toFhir5 } from "@kinbook/fhir";
+import type { GedcomDocument } from "@kinbook/gedcom";
+import { toGedcom55 } from "@kinbook/gedcom";
+import { toGedcom70 } from "@kinbook/gedcom";
 
 /**
- * The bridge between the SQLite source of truth (@ftp/database) and the
- * native GEDCOM format (@ftp/gedcom). Implements the shared core actions
+ * The bridge between the SQLite source of truth (@kinbook/database) and the
+ * native GEDCOM format (@kinbook/gedcom). Implements the shared core actions
  * (TreeStore) used by both the CLI and the MCP server.
  */
 export class SyncStore implements TreeStore {

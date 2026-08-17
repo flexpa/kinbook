@@ -3,8 +3,8 @@ import type { ExportFormat, Family, GenDate, NamePart, Person, Place, Sex } from
 /**
  * Shared, framework-agnostic actions.
  * Both the CLI and the MCP server call these functions; business logic lives
- * here once. Storage lives in @ftp/database, format codec in @ftp/gedcom, and
- * the bridge is @ftp/sync. This package defines the types and the action
+ * here once. Storage lives in @kinbook/database, format codec in @kinbook/gedcom, and
+ * the bridge is @kinbook/sync. This package defines the types and the action
  * contracts used across all of them.
  */
 

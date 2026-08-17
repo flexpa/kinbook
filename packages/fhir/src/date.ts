@@ -1,4 +1,4 @@
-import type { GenDate } from "@ftp/core";
+import type { GenDate } from "@kinbook/core";
 
 /**
  * A GenDate rendered for a FHIR date/string choice element: `date` when the

@@ -4,8 +4,8 @@ import {
   CallToolRequestSchema,
   ListToolsRequestSchema,
 } from "@modelcontextprotocol/sdk/types.js";
-import { openTree } from "@ftp/sync";
-import type { Actions } from "@ftp/core";
+import { openTree } from "@kinbook/sync";
+import type { Actions } from "@kinbook/core";
 
 const TOOLS = [
   {

@@ -1,5 +1,5 @@
 import { test, expect } from "bun:test";
-import { TreeDatabase, Repositories } from "@ftp/database";
+import { TreeDatabase, Repositories } from "@kinbook/database";
 import { SyncStore } from "../src/store";
 
 function store() {

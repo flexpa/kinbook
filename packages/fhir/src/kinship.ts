@@ -1,4 +1,4 @@
-import type { Family, Person, Sex } from "@ftp/core";
+import type { Family, Person, Sex } from "@kinbook/core";
 
 /**
  * Kinship of a family member relative to the patient, expressed with the

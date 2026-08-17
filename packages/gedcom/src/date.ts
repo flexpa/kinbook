@@ -1,4 +1,4 @@
-import type { GenDate } from "@ftp/core";
+import type { GenDate } from "@kinbook/core";
 
 const MONTHS = [
   "JAN", "FEB", "MAR", "APR", "MAY", "JUN",

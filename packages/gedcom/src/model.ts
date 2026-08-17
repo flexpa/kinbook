@@ -1,4 +1,4 @@
-import type { EventType, GenDate } from "@ftp/core";
+import type { EventType, GenDate } from "@kinbook/core";
 
 /**
  * Low-level GEDCOM node. A single line of a .ged file:

@@ -1,6 +1,6 @@
-import type { Actions, TreeStore } from "@ftp/core";
-import { registerStore } from "@ftp/core";
-import { Repositories, TreeDatabase } from "@ftp/database";
+import type { Actions, TreeStore } from "@kinbook/core";
+import { registerStore } from "@kinbook/core";
+import { Repositories, TreeDatabase } from "@kinbook/database";
 import { SyncStore } from "./store";
 
 export { SyncStore } from "./store";

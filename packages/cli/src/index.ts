@@ -1,5 +1,5 @@
-import { openTree } from "@ftp/sync";
-import type { Family, Person, GenDate } from "@ftp/core";
+import { openTree } from "@kinbook/sync";
+import type { Family, Person, GenDate } from "@kinbook/core";
 
 interface Flags {
   db: string;

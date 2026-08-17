@@ -1,4 +1,4 @@
-import type { Event, Family, NamePart, Person, Sex } from "@ftp/core";
+import type { Event, Family, NamePart, Person, Sex } from "@kinbook/core";
 import { toFhirDate } from "./date";
 import type { Kinship } from "./kinship";
 import { relatives } from "./kinship";
