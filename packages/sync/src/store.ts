@@ -116,7 +116,12 @@ export class SyncStore implements TreeStore {
         husbandXref: g.husbandId ? `@${g.husbandId}@` : null,
         wifeXref: g.wifeId ? `@${g.wifeId}@` : null,
         childXrefs: g.childrenIds.map((c) => `@${c}@`),
-        events: [],
+        events: g.events.map((e) => ({
+          type: e.type,
+          date: e.date,
+          place: e.place?.name ?? null,
+          notes: e.notes ? [e.notes] : undefined,
+        })),
         notes: g.notes ? [g.notes] : undefined,
       })),
     };
