@@ -67,6 +67,19 @@ export class Repositories {
   }
 
   addEvent(personId: string, ev: Event): Event {
+    this.insertEvent(ev);
+    this.store.db.query("INSERT INTO person_events (person_id, event_id) VALUES (?, ?)").run(personId, ev.id);
+    return ev;
+  }
+
+  /** Attach an event to a family — marriage, divorce, and the like. */
+  addFamilyEvent(familyId: string, ev: Event): Event {
+    this.insertEvent(ev);
+    this.store.db.query("INSERT INTO family_events (family_id, event_id) VALUES (?, ?)").run(familyId, ev.id);
+    return ev;
+  }
+
+  private insertEvent(ev: Event): void {
     const placeId = ev.place ? getOrCreatePlace(this.store.db, ev.place.name) : null;
     this.store.db
       .query(
@@ -85,8 +98,6 @@ export class Repositories {
         placeId,
         ev.notes ?? null,
       );
-    this.store.db.query("INSERT INTO person_events (person_id, event_id) VALUES (?, ?)").run(personId, ev.id);
-    return ev;
   }
 
   addFamily(input: {
@@ -107,22 +118,12 @@ export class Repositories {
     for (const c of input.childrenIds ?? []) this.addMember(id, c, "child");
 
     if (input.marriage) {
-      this.store.db
-        .query(
-          `INSERT INTO events (id, type, date_qualifier, date_calendar, date_year, date_month, date_day, date_text, place_id, notes)
-           VALUES (?, 'marriage', ?, ?, ?, ?, ?, ?, ?, ?)`,
-        )
-        .run(
-          rowIdFor("E"),
-          input.marriage.date?.qualifier ?? null,
-          input.marriage.date?.calendar ?? null,
-          input.marriage.date?.year ?? null,
-          input.marriage.date?.month ?? null,
-          input.marriage.date?.day ?? null,
-          input.marriage.date?.text ?? null,
-          input.marriage.place ? getOrCreatePlace(this.store.db, input.marriage.place.name) : null,
-          null,
-        );
+      this.addFamilyEvent(id, {
+        id: rowIdFor("E"),
+        type: "marriage",
+        date: input.marriage.date,
+        place: input.marriage.place ?? null,
+      });
     }
     return this.getFamily(id)!;
   }
@@ -242,15 +243,23 @@ export class Repositories {
   }
 
   private loadPersonEvents(personId: string): Event[] {
+    return this.loadEvents("person_events", "person_id", personId);
+  }
+
+  private loadFamilyEvents(familyId: string): Event[] {
+    return this.loadEvents("family_events", "family_id", familyId);
+  }
+
+  private loadEvents(linkTable: string, ownerColumn: string, ownerId: string): Event[] {
     const rows = this.store.db
       .query<Record<string, unknown>, Bindings[]>(
         `SELECT e.*, p.name as _place_name
          FROM events e
          LEFT JOIN places p ON e.place_id = p.id
-         JOIN person_events pe ON pe.event_id = e.id
-         WHERE pe.person_id = ?`,
+         JOIN ${linkTable} le ON le.event_id = e.id
+         WHERE le.${ownerColumn} = ?`,
       )
-      .all(personId);
+      .all(ownerId);
 
     return rows.map((r) => ({
       id: String(r.id),
@@ -287,7 +296,7 @@ export class Repositories {
       husbandId,
       wifeId,
       childrenIds,
-      events: [], // marriage events not yet linked to families
+      events: this.loadFamilyEvents(id),
       notes: row.notes == null ? null : String(row.notes),
     };
   }

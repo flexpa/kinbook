@@ -68,6 +68,12 @@ CREATE TABLE IF NOT EXISTS family_members (
   PRIMARY KEY (family_id, person_id)
 );
 
+CREATE TABLE IF NOT EXISTS family_events (
+  family_id TEXT NOT NULL REFERENCES families(id) ON DELETE CASCADE,
+  event_id  TEXT NOT NULL REFERENCES events(id) ON DELETE CASCADE,
+  PRIMARY KEY (family_id, event_id)
+);
+
 CREATE TABLE IF NOT EXISTS sources (
   id          TEXT PRIMARY KEY,
   title       TEXT,
