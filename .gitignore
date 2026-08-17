@@ -1,0 +1,10 @@
+node_modules/
+dist/
+bin/
+*.db
+*.db-journal
+.env
+.DS_Store
+PLAN.md
+family-tree.ged
+.claude/

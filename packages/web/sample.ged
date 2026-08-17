@@ -1,0 +1,385 @@
+0 HEAD
+1 SOUR FAMILY-TREE
+2 VERS 0.1.0
+1 GEDC
+2 VERS 5.5.5
+2 FORM LINEAGE-LINKED
+1 CHAR UTF-8
+0 @I1@ INDI
+1 NAME Håkon /Voss/
+1 SEX M
+1 BIRT
+2 DATE 3 MAY 1821
+2 PLAC Bergen, Norway
+1 DEAT
+2 DATE 1889
+2 PLAC Bergen, Norway
+1 OCCU Shipwright
+1 FAMS @F1@
+0 @I2@ INDI
+1 NAME Sigrid /Dahl/
+1 SEX F
+1 BIRT
+2 DATE ABT 1826
+2 PLAC Voss, Norway
+1 DEAT
+2 DATE 1901
+2 PLAC Bergen, Norway
+1 FAMS @F1@
+0 @I3@ INDI
+1 NAME Edvard /Voss/
+1 SEX M
+1 BIRT
+2 DATE 14 FEB 1848
+2 PLAC Bergen, Norway
+1 IMMI
+2 DATE 1869
+2 PLAC Duluth, Minnesota
+1 OCCU Dock foreman
+1 DEAT
+2 DATE 2 NOV 1912
+2 PLAC Duluth, Minnesota
+1 FAMC @F1@
+1 FAMS @F2@
+0 @I4@ INDI
+1 NAME Marit /Voss/
+1 SEX F
+1 BIRT
+2 DATE 1850
+2 PLAC Bergen, Norway
+1 DEAT
+2 DATE 1855
+2 PLAC Bergen, Norway
+1 FAMC @F1@
+0 @I5@ INDI
+1 NAME Johan /Voss/
+1 SEX M
+1 BIRT
+2 DATE 1853
+2 PLAC Bergen, Norway
+1 OCCU Harbor pilot
+1 DEAT
+2 DATE 1921
+2 PLAC Bergen, Norway
+1 FAMC @F1@
+1 FAMS @F3@
+0 @I6@ INDI
+1 NAME Anna /Berge/
+1 SEX F
+1 BIRT
+2 DATE 8 JUN 1852
+2 PLAC Hardanger, Norway
+1 IMMI
+2 DATE 1870
+2 PLAC Duluth, Minnesota
+1 DEAT
+2 DATE 1934
+2 PLAC Duluth, Minnesota
+1 FAMC @F8@
+1 FAMS @F2@
+0 @I7@ INDI
+1 NAME Oskar /Voss/
+1 SEX M
+1 BIRT
+2 DATE 19 SEP 1874
+2 PLAC Duluth, Minnesota
+1 OCCU Locomotive engineer
+1 DEAT
+2 DATE 1949
+2 PLAC Saint Paul, Minnesota
+1 FAMC @F2@
+1 FAMS @F4@
+0 @I8@ INDI
+1 NAME Ingeborg /Voss/
+1 SEX F
+1 BIRT
+2 DATE 1876
+2 PLAC Duluth, Minnesota
+1 DEAT
+2 DATE 1958
+2 PLAC Chicago, Illinois
+1 FAMC @F2@
+1 FAMS @F5@
+0 @I9@ INDI
+1 NAME Gunnar /Voss/
+1 SEX M
+1 BIRT
+2 DATE 1879
+2 PLAC Duluth, Minnesota
+1 OCCU Ore sampler
+1 DEAT
+2 DATE OCT 1918
+2 PLAC Camp Dodge, Iowa
+1 FAMC @F2@
+0 @I10@ INDI
+1 NAME Solveig /Voss/
+1 SEX F
+1 BIRT
+2 DATE 1883
+2 PLAC Duluth, Minnesota
+1 DEAT
+2 DATE 1971
+2 PLAC Minneapolis, Minnesota
+1 FAMC @F2@
+1 FAMS @F6@
+0 @I11@ INDI
+1 NAME Clara /Lindqvist/
+1 SEX F
+1 BIRT
+2 DATE 1878
+2 PLAC Tvååker, Sweden
+1 DEAT
+2 DATE 1965
+2 PLAC Saint Paul, Minnesota
+1 FAMS @F4@
+0 @I12@ INDI
+1 NAME Arthur /Voss/
+1 SEX M
+1 BIRT
+2 DATE 1900
+2 PLAC Saint Paul, Minnesota
+1 OCCU Draftsman
+1 DEAT
+2 DATE 1977
+2 PLAC Saint Paul, Minnesota
+1 FAMC @F4@
+0 @I13@ INDI
+1 NAME Ruth /Voss/
+1 SEX F
+1 BIRT
+2 DATE 1903
+2 PLAC Saint Paul, Minnesota
+1 DEAT
+2 DATE 1998
+2 PLAC Portland, Oregon
+1 FAMC @F4@
+0 @I14@ INDI
+1 NAME Walter /Voss/
+1 SEX M
+1 BIRT
+2 DATE 1907
+2 PLAC Saint Paul, Minnesota
+1 DEAT
+2 DATE 1908
+2 PLAC Saint Paul, Minnesota
+1 FAMC @F4@
+0 @I15@ INDI
+1 NAME Thomas /Quinn/
+1 SEX M
+1 BIRT
+2 DATE 1871
+2 PLAC Galway, Ireland
+1 OCCU Grain inspector
+1 DEAT
+2 DATE 1940
+2 PLAC Chicago, Illinois
+1 FAMS @F5@
+0 @I16@ INDI
+1 NAME Mary /Quinn/
+1 SEX F
+1 BIRT
+2 DATE 1902
+2 PLAC Duluth, Minnesota
+1 DEAT
+2 DATE 1990
+2 PLAC Chicago, Illinois
+1 FAMC @F5@
+0 @I17@ INDI
+1 NAME Henrik /Aasen/
+1 SEX M
+1 BIRT
+2 DATE 1880
+2 PLAC Trondheim, Norway
+1 OCCU Photographer
+1 DEAT
+2 DATE 1929
+2 PLAC Minneapolis, Minnesota
+1 FAMS @F6@
+1 FAMS @F9@
+0 @I18@ INDI
+1 NAME Eleanor /Aasen/
+1 SEX F
+1 BIRT
+2 DATE 1909
+2 PLAC Minneapolis, Minnesota
+1 DEAT
+2 DATE 2001
+2 PLAC Minneapolis, Minnesota
+1 FAMC @F6@
+1 FAMS @F7@
+0 @I19@ INDI
+1 NAME Frank /Merrill/
+1 SEX M
+1 BIRT
+2 DATE 1905
+2 PLAC Red Wing, Minnesota
+1 OCCU Linotype operator
+1 DEAT
+2 DATE 1988
+2 PLAC Minneapolis, Minnesota
+1 FAMS @F7@
+0 @I20@ INDI
+1 NAME Lars /Berge/
+1 SEX M
+1 BIRT
+2 DATE 1818
+2 PLAC Hardanger, Norway
+1 OCCU Tenant farmer
+1 DEAT
+2 DATE 1877
+2 PLAC Hardanger, Norway
+1 FAMS @F8@
+0 @I21@ INDI
+1 NAME Ingrid /Solheim/
+1 SEX F
+1 BIRT
+2 DATE ABT 1824
+2 PLAC Ulvik, Norway
+1 DEAT
+2 DATE 1898
+2 PLAC Hardanger, Norway
+1 FAMS @F8@
+0 @I22@ INDI
+1 NAME Nils /Berge/
+1 SEX M
+1 BIRT
+2 DATE 1849
+2 PLAC Hardanger, Norway
+1 OCCU Fisherman
+1 DEAT
+2 DATE 1916
+2 PLAC Ålesund, Norway
+1 FAMC @F8@
+0 @I23@ INDI
+1 NAME Kari /Nilsen/
+1 SEX F
+1 BIRT
+2 DATE 1858
+2 PLAC Bergen, Norway
+1 DEAT
+2 DATE 1930
+2 PLAC Bergen, Norway
+1 FAMS @F3@
+0 @I24@ INDI
+1 NAME Astrid /Voss/
+1 SEX F
+1 BIRT
+2 DATE 1880
+2 PLAC Bergen, Norway
+1 DEAT
+2 DATE 1966
+2 PLAC Oslo, Norway
+1 FAMC @F3@
+0 @I25@ INDI
+1 NAME Per /Voss/
+1 SEX M
+1 BIRT
+2 DATE 1883
+2 PLAC Bergen, Norway
+1 DEAT
+2 DATE 1884
+2 PLAC Bergen, Norway
+1 FAMC @F3@
+0 @I26@ INDI
+1 NAME Joan /Merrill/
+1 SEX F
+1 BIRT
+2 DATE 12 APR 1935
+2 PLAC Minneapolis, Minnesota
+1 FAMC @F7@
+0 @I27@ INDI
+1 NAME Alma /Pedersen/
+1 SEX F
+1 BIRT
+2 DATE 1891
+2 PLAC Fargo, North Dakota
+1 DEAT
+2 DATE 1980
+2 PLAC Minneapolis, Minnesota
+1 FAMS @F9@
+0 @I28@ INDI
+1 NAME Harold /Aasen/
+1 SEX M
+1 BIRT
+2 DATE 1923
+2 PLAC Minneapolis, Minnesota
+1 OCCU Radio repairman
+1 DEAT
+2 DATE 2010
+2 PLAC Duluth, Minnesota
+1 FAMC @F9@
+0 @F1@ FAM
+1 HUSB @I1@
+1 WIFE @I2@
+1 CHIL @I3@
+1 CHIL @I4@
+1 CHIL @I5@
+1 MARR
+2 DATE 1847
+2 PLAC Bergen, Norway
+0 @F2@ FAM
+1 HUSB @I3@
+1 WIFE @I6@
+1 CHIL @I7@
+1 CHIL @I8@
+1 CHIL @I9@
+1 CHIL @I10@
+1 MARR
+2 DATE 20 JUN 1872
+2 PLAC Duluth, Minnesota
+0 @F3@ FAM
+1 HUSB @I5@
+1 WIFE @I23@
+1 CHIL @I24@
+1 CHIL @I25@
+1 MARR
+2 DATE 1878
+2 PLAC Bergen, Norway
+0 @F4@ FAM
+1 HUSB @I7@
+1 WIFE @I11@
+1 CHIL @I12@
+1 CHIL @I13@
+1 CHIL @I14@
+1 MARR
+2 DATE 1898
+2 PLAC Duluth, Minnesota
+0 @F5@ FAM
+1 HUSB @I15@
+1 WIFE @I8@
+1 CHIL @I16@
+1 MARR
+2 DATE 1900
+2 PLAC Duluth, Minnesota
+0 @F6@ FAM
+1 HUSB @I17@
+1 WIFE @I10@
+1 CHIL @I18@
+1 MARR
+2 DATE 1907
+2 PLAC Minneapolis, Minnesota
+1 DIV
+2 DATE 1919
+0 @F7@ FAM
+1 HUSB @I19@
+1 WIFE @I18@
+1 CHIL @I26@
+1 MARR
+2 DATE 1932
+2 PLAC Minneapolis, Minnesota
+0 @F8@ FAM
+1 HUSB @I20@
+1 WIFE @I21@
+1 CHIL @I6@
+1 CHIL @I22@
+1 MARR
+2 DATE 1843
+2 PLAC Hardanger, Norway
+0 @F9@ FAM
+1 HUSB @I17@
+1 WIFE @I27@
+1 CHIL @I28@
+1 MARR
+2 DATE 1921
+2 PLAC Minneapolis, Minnesota
+0 TRLR

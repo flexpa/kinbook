@@ -1,0 +1,34 @@
+0 HEAD
+1 SOUR FTP
+2 VERS 0.1
+1 GEDC
+2 VERS 5.5.5
+2 FORM LINEAGE-LINKED
+1 CHAR UTF-8
+0 @I1@ INDI
+1 NAME John /Smith/
+2 GIVN John
+2 SURN Smith
+1 SEX M
+1 BIRT
+2 DATE 12 OCT 1920
+2 PLAC London, England
+2 NOTE Born at home
+1 NOTE Research notes for John
+2 CONT Second line of note
+1 FAMS @F1@
+0 @I2@ INDI
+1 NAME Jane /Doe/
+2 GIVN Jane
+2 SURN Doe
+1 SEX F
+1 BIRT
+2 DATE ABT 1925
+1 FAMS @F1@
+0 @F1@ FAM
+1 HUSB @I1@
+1 WIFE @I2@
+1 MARR
+2 DATE 1948
+1 NOTE Marriage certificate on file
+0 TRLR

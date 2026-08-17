@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Kinbook</title>
+<style>
+/*__CSS__*/
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">Kinbook</div>
+  <div class="filechip" id="filechip" hidden>
+    <span id="filename"></span>
+    <button id="clearfile" title="Close this archive" aria-label="Close this archive">×</button>
+  </div>
+  <div class="spacer"></div>
+  <input id="search" type="search" placeholder="Search records" autocomplete="off" spellcheck="false" aria-label="Search records">
+  <div class="stats" id="stats"></div>
+  <div class="zoomctl">
+    <button id="zoomout" title="Zoom out" aria-label="Zoom out">−</button>
+    <span id="zoomlevel">100%</span>
+    <button id="zoomin" title="Zoom in" aria-label="Zoom in">+</button>
+    <button id="fitbtn" title="Fit the tree to the window" aria-label="Fit the tree to the window">⛶</button>
+  </div>
+  <button id="openbtn" class="open">Open file</button>
+</header>
+<main>
+  <svg id="stage" role="application" aria-label="Family tree chart">
+    <g id="camera"></g>
+  </svg>
+  <div id="empty">
+    <div class="folder">
+      <p class="eyebrow">GEDCOM READING ROOM</p>
+      <h1>Kinbook</h1>
+      <p class="lede">A single page that renders a family archive as a live, zoomable chart. Click any record to trace its bloodline.</p>
+      <p class="drop">Drop a <code>.ged</code> file anywhere on this page.</p>
+      <div class="actions">
+        <button id="openbtn2">Open a file</button>
+        <button id="samplebtn" class="ghost">View the sample archive</button>
+      </div>
+      <p class="hint">ftree export gedcom55 &gt; family.ged</p>
+    </div>
+  </div>
+  <canvas id="minimap" aria-hidden="true"></canvas>
+  <div id="toast" role="status"></div>
+</main>
+<footer>
+  <span id="status"></span>
+  <span class="spacer"></span>
+  <span class="hints">drag pans · scroll zooms · <kbd>/</kbd> search · <kbd>esc</kbd> clears</span>
+</footer>
+<input type="file" id="fileinput" accept=".ged,.gedcom,text/plain" hidden>
+<script type="module">
+//__JS__
+</script>
+</body>
+</html>
