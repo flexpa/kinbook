@@ -16,12 +16,15 @@ desktop application.
 ```
 cli ─┐
      ├→ sync ─→ database   (SQLite source of truth)
-mcp ─┘   └─→ gedcom        (native format codec, storage-agnostic)
+mcp ─┘   ├─→ gedcom        (native format codec, storage-agnostic)
+         └─→ fhir          (FHIR R5 export codec)
 ```
 
 - `packages/core` — shared domain types + action contracts.
 - `packages/database` — the SQLite source of truth (schema, repositories).
 - `packages/gedcom` — native GEDCOM model + parser/writer, 5.5.5 and 7.0 dialects.
+- `packages/fhir` — FHIR R5 exporter: one Patient plus FamilyMemberHistory
+  resources for each relative, with computed kinship codes (v3-RoleCode).
 - `packages/sync` — the bridge: SQLite ↔ GEDCOM, and the shared actions layer.
 - `packages/cli` — the `ftree` command-line interface.
 - `packages/mcp-server` — the agent-facing MCP server.
@@ -48,6 +51,9 @@ bun packages/cli/src/index.ts update kelly_joshua --born "1988"
 
 # Export to GEDCOM
 bun packages/cli/src/index.ts export gedcom55 > family-tree.ged
+
+# Export to FHIR R5 (the given person becomes the Patient)
+bun packages/cli/src/index.ts export fhir5 kelly_joshua > family-history.json
 ```
 
 All commands accept `--db <file>` to point at a specific SQLite file. The
@@ -63,6 +69,7 @@ you run from the repository root, where the real database lives.
 | `marry <idA> <idB> [--on <date>]` | Join two people as spouses in a new family. Prints the family, including its id. |
 | `search <query>` | Ranked name search. Prints each match with its person id. |
 | `export [gedcom55\|gedcom70]` | Project the tree to GEDCOM text on stdout. |
+| `export fhir5 <person-id>` | Project the tree to a FHIR R5 Bundle on stdout: a Patient for `<person-id>` plus one FamilyMemberHistory per connected relative. |
 | `tree` | Print an ASCII outline of the tree. |
 
 Dates accept `YYYY-MM-DD`, `YYYY-MM`, `YYYY`, or `abt YYYY`. Sex accepts

@@ -75,4 +75,4 @@ export interface Family {
   notes?: string | null;
 }
 
-export type ExportFormat = "gedcom55" | "gedcom70";
+export type ExportFormat = "gedcom55" | "gedcom70" | "fhir5";

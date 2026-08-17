@@ -161,8 +161,11 @@ async function main() {
         break;
       }
       case "export": {
-        const format = (args[1] as "gedcom55" | "gedcom70") ?? "gedcom55";
-        const out = await actions.exportTree(format);
+        const format = (args[1] as "gedcom55" | "gedcom70" | "fhir5") ?? "gedcom55";
+        if (format === "fhir5" && !args[2]) {
+          throw new Error(`usage: ftree export fhir5 <person-id>  (the person who is the FHIR Patient)`);
+        }
+        const out = await actions.exportTree(format, args[2]);
         process.stdout.write(out);
         break;
       }
@@ -193,6 +196,7 @@ function usage(): string {
     "  ftree [--db <file>] marry <idA> <idB> [--on <date>] [--place <place>]",
     "  ftree [--db <file>] search <query>",
     "  ftree [--db <file>] export [gedcom55|gedcom70]",
+    "  ftree [--db <file>] export fhir5 <person-id>   (FHIR R5 Bundle; the person is the Patient)",
     "  ftree [--db <file>] tree",
     "  ftree help",
     "",

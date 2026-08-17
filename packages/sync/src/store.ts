@@ -10,6 +10,7 @@ import type {
 } from "@ftp/core";
 import { genId } from "@ftp/database";
 import type { Repositories } from "@ftp/database";
+import { toFhir5 } from "@ftp/fhir";
 import type { GedcomDocument } from "@ftp/gedcom";
 import { toGedcom55 } from "@ftp/gedcom";
 import { toGedcom70 } from "@ftp/gedcom";
@@ -88,9 +89,13 @@ export class SyncStore implements TreeStore {
     return scored;
   }
 
-  async exportTree(format: ExportFormat = "gedcom55"): Promise<string> {
+  async exportTree(format: ExportFormat = "gedcom55", patientId?: string): Promise<string> {
     const people = this.repo.listPeople();
     const families = this.repo.listFamilies();
+    if (format === "fhir5") {
+      if (!patientId) throw new Error("fhir5 export requires a patient: pass the person's node id");
+      return toFhir5({ people, families, patientId });
+    }
     const doc: GedcomDocument = {
       individuals: people.map((p) => ({
         xref: `@${p.id}@`,

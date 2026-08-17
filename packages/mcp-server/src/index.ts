@@ -32,10 +32,14 @@ const TOOLS = [
   },
   {
     name: "export_tree",
-    description: "Export the tree to GEDCOM (5.5.5 or 7.0).",
+    description:
+      "Export the tree to GEDCOM (5.5.5 or 7.0) or a FHIR R5 Bundle of FamilyMemberHistory resources. fhir5 requires patientId: the node id of the person who is the Patient.",
     inputSchema: {
       type: "object",
-      properties: { format: { type: "string", enum: ["gedcom55", "gedcom70"] } },
+      properties: {
+        format: { type: "string", enum: ["gedcom55", "gedcom70", "fhir5"] },
+        patientId: { type: "string", description: "Person node id for the FHIR Patient (fhir5 only)" },
+      },
     },
   },
 ] as const;
@@ -79,7 +83,10 @@ export function createServer(dbFile: string | undefined): {
           };
         }
         case "export_tree": {
-          const out = await actions.exportTree(args.format as "gedcom55" | "gedcom70");
+          const out = await actions.exportTree(
+            args.format as "gedcom55" | "gedcom70" | "fhir5",
+            args.patientId ? String(args.patientId) : undefined,
+          );
           return { content: [{ type: "text", text: out }] };
         }
         default:

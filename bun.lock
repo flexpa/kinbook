@@ -31,6 +31,13 @@
         "@ftp/core": "*",
       },
     },
+    "packages/fhir": {
+      "name": "@ftp/fhir",
+      "version": "0.1.0",
+      "dependencies": {
+        "@ftp/core": "*",
+      },
+    },
     "packages/gedcom": {
       "name": "@ftp/gedcom",
       "version": "0.1.0",
@@ -54,8 +61,13 @@
       "dependencies": {
         "@ftp/core": "*",
         "@ftp/database": "*",
+        "@ftp/fhir": "*",
         "@ftp/gedcom": "*",
       },
+    },
+    "packages/web": {
+      "name": "@ftp/web",
+      "version": "0.1.0",
     },
   },
   "packages": {
@@ -65,11 +77,15 @@
 
     "@ftp/database": ["@ftp/database@workspace:packages/database"],
 
+    "@ftp/fhir": ["@ftp/fhir@workspace:packages/fhir"],
+
     "@ftp/gedcom": ["@ftp/gedcom@workspace:packages/gedcom"],
 
     "@ftp/mcp-server": ["@ftp/mcp-server@workspace:packages/mcp-server"],
 
     "@ftp/sync": ["@ftp/sync@workspace:packages/sync"],
+
+    "@ftp/web": ["@ftp/web@workspace:packages/web"],
 
     "@hono/node-server": ["@hono/node-server@2.1.1", "", { "peerDependencies": { "hono": "^4" } }, "sha512-ELuehkj5VCBdgEw9zs+ivkKwyzzUCSQuE96YmiPvn1ECBoZCczbFXJLeEGMTYjphP6gydh4pHMqEYPVMYUVgQg=="],
 

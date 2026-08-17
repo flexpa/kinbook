@@ -54,7 +54,8 @@ export interface TreeStore {
   addFamily(input: AddFamilyInput): Promise<Family>;
   updatePerson(id: string, input: UpdatePersonInput): Promise<Person>;
   search(query: string): Promise<SearchResult[]>;
-  exportTree(format?: ExportFormat): Promise<string>;
+  /** `patientId` selects the FHIR Patient node; required for "fhir5", ignored otherwise. */
+  exportTree(format?: ExportFormat, patientId?: string): Promise<string>;
   listPeople(): Promise<Person[]>;
   listFamilies(): Promise<Family[]>;
   getPerson(id: string): Promise<Person | null>;
@@ -65,7 +66,8 @@ export interface Actions {
   addFamily(input: AddFamilyInput): Promise<Family>;
   updatePerson(id: string, input: UpdatePersonInput): Promise<Person>;
   search(query: string): Promise<SearchResult[]>;
-  exportTree(format?: ExportFormat): Promise<string>;
+  /** `patientId` selects the FHIR Patient node; required for "fhir5", ignored otherwise. */
+  exportTree(format?: ExportFormat, patientId?: string): Promise<string>;
   listPeople(): Promise<Person[]>;
   listFamilies(): Promise<Family[]>;
   getPerson(id: string): Promise<Person | null>;

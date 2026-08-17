@@ -1,14 +1,11 @@
 {
-  "name": "@ftp/sync",
+  "name": "@ftp/fhir",
   "version": "0.1.0",
   "private": true,
   "type": "module",
   "main": "src/index.ts",
   "types": "src/index.ts",
   "dependencies": {
-    "@ftp/core": "*",
-    "@ftp/database": "*",
-    "@ftp/fhir": "*",
-    "@ftp/gedcom": "*"
+    "@ftp/core": "*"
   }
 }

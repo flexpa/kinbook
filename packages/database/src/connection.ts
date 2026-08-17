@@ -1,10 +1,10 @@
-import { readFileSync } from "node:fs";
-import { join } from "node:path";
+/// <reference path="./sql.d.ts" />
 import { Database } from "bun:sqlite";
 import type { SQLQueryBindings } from "bun:sqlite";
+// a text import (not readFileSync) so `bun build --compile` embeds the schema
+import SCHEMA_SQL from "./schema.sql" with { type: "text" };
 
 export type Bindings = SQLQueryBindings;
-const SCHEMA_SQL = readFileSync(join(import.meta.dir, "schema.sql"), "utf8");
 
 export class TreeDatabase {
   readonly db: Database;
